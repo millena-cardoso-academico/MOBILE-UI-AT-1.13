@@ -1,0 +1,70 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --border-color: #ddd;
+  --button-bg: #6200ea;
+  --button-hover-bg: #3700b3;
+}
+
+body.dark {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+  --border-color: #555;
+  --button-bg: #bb86fc;
+  --button-hover-bg: #3700b3;
+}
+
+.quiz-container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.confirm,
+.next {
+  background-color: var(--button-bg);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.confirm:hover,
+.next:hover {
+  background-color: var(--button-hover-bg);
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    padding: 40px;
+  }
+
+  .quiz-container {
+    padding: 30px;
+  }
+
+  .confirm,
+  .next {
+    padding: 15px;
+    font-size: 18px;
+    width: auto;
+    min-width: 200px;
+  }
+}
